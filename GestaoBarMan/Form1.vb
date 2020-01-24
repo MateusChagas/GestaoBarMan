@@ -11,4 +11,14 @@
     Private Sub Entrar_Click(sender As Object, e As EventArgs) Handles Entrar.Click
 
     End Sub
+
+    Private Sub Login_TextChanged(sender As Object, e As EventArgs) Handles Login.TextChanged
+
+        BuscaFuncionario()
+
+    End Sub
+
+    Private Sub BuscaFuncionario()
+        Throw New NotImplementedException()
+    End Sub
 End Class
