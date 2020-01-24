@@ -6,6 +6,5 @@ public class Funcionario
     public string LoginFuncionario { get; set; }
     public string SenhaFuncionario { get; set; }
     public bool UsuarioMaster { get; set; }
-
    
 }
