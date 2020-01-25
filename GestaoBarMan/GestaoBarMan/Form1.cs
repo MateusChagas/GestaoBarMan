@@ -27,9 +27,9 @@ namespace GestaoBarMan
             func.Senha = Senha.Text;
             MySqlConnection conexao = new MySqlConnection(ConfigurationSettings.AppSettings["conexao"]);            
             MySqlCommand cmd = conexao.CreateCommand();
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * FROM FUNCIONARIOS WHERE LOGINFUNC = " + func.LoginFuncionario + "";
             conexao.Open();
-            cmd.CommandText = "SELECT * FROM FUNCIONARIOS WHERE LOGINFUNC = "+ func.LoginFuncionario +"";
+            cmd.CommandType = CommandType.Text;          
             cmd.ExecuteNonQuery();
             string result = cmd.CommandText;
             conexao.Close();

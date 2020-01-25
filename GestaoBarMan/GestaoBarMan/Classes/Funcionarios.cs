@@ -13,4 +13,5 @@ namespace GestaoBarMan
         public string Senha { get; set; }
         public bool UsuarioMaster { get; set; }
     }
+
 }
