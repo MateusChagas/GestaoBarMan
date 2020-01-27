@@ -1,1 +1,10 @@
 C:\Paralelo\GestaoBarMan\GestaoBarMan\bin\Debug\GestaoBarMan.exe.config
+C:\Paralelo\GestaoBarMan\GestaoBarMan\bin\Debug\GestaoBarMan.exe
+C:\Paralelo\GestaoBarMan\GestaoBarMan\bin\Debug\GestaoBarMan.pdb
+C:\Paralelo\GestaoBarMan\GestaoBarMan\bin\Debug\GestaoBarMan.xml
+C:\Paralelo\GestaoBarMan\GestaoBarMan\obj\Debug\GestaoBarMan.Form1.resources
+C:\Paralelo\GestaoBarMan\GestaoBarMan\obj\Debug\GestaoBarMan.Resources.resources
+C:\Paralelo\GestaoBarMan\GestaoBarMan\obj\Debug\GestaoBarMan.vbproj.GenerateResource.Cache
+C:\Paralelo\GestaoBarMan\GestaoBarMan\obj\Debug\GestaoBarMan.exe
+C:\Paralelo\GestaoBarMan\GestaoBarMan\obj\Debug\GestaoBarMan.xml
+C:\Paralelo\GestaoBarMan\GestaoBarMan\obj\Debug\GestaoBarMan.pdb
