@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Configuration;
 using MySql.Data.MySqlClient;
 using MySql.Data.Common;
+using MySql.Data.Types;
 
 namespace GestaoBarMan
 {
@@ -25,15 +26,14 @@ namespace GestaoBarMan
             Funcionarios func = new Funcionarios();
             func.LoginFuncionario = Login.Text;
             func.Senha = Senha.Text;
-            MySqlConnection conexao = new MySqlConnection(ConfigurationSettings.AppSettings["conexao"]);            
+            MySqlConnection conexao = new MySqlConnection(ConfigurationSettings.AppSettings["conexao"]);           
             MySqlCommand cmd = conexao.CreateCommand();
-            cmd.CommandText = "SELECT * FROM FUNCIONARIOS WHERE LOGINFUNC = " + func.LoginFuncionario + "";
-            conexao.Open();
-            cmd.CommandType = CommandType.Text;          
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * FROM FUNCIONARIOS WHERE LOGINFUNC = " + func.LoginFuncionario + "";            
+            conexao.Open();                   
             cmd.ExecuteNonQuery();
             string result = cmd.CommandText;
-            conexao.Close();
-                        
+            conexao.Close();                        
             if (result == "")
             {
                 MessageBox.Show("O Usuário "+ func.LoginFuncionario + " não foi localizado ");

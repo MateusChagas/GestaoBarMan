@@ -1,18 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-<<<<<<< HEAD:GestaoBarMan.sln
 VisualStudioVersion = 14.0.25420.1
-=======
-VisualStudioVersion = 14.0.24720.0
->>>>>>> e2407048e919739c05732e5bc4be13daba513321:GestaoBarMan/GestaoBarMan.sln
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestaoBarMan", "GestaoBarMan\GestaoBarMan.csproj", "{C5160A63-F293-4AF1-9A10-9C3E0BAE9D80}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Classes", "Classes", "{00A74AB5-4106-4732-B68E-D8758DD8D5AE}"
-	ProjectSection(SolutionItems) = preProject
-		Funcionario.cs = Funcionario.cs
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
