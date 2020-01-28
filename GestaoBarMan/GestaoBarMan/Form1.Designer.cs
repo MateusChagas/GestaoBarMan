@@ -103,6 +103,7 @@
             this.Cadastrar.TabIndex = 6;
             this.Cadastrar.Text = "Cadastrar";
             this.Cadastrar.UseVisualStyleBackColor = false;
+            this.Cadastrar.Click += new System.EventHandler(this.Cadastrar_Click);
             // 
             // linkLabel1
             // 
