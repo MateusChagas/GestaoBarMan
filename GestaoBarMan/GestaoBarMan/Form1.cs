@@ -24,19 +24,19 @@ namespace GestaoBarMan
 
             }
             
-            MySqlConnection conexao = new MySqlConnection(ConfigurationManager.AppSettings["conexao"]);            
-            string Query = String.Format("@ SELECT * FROM FUNCIONARIOS WHERE LOGINFUNC = '{0}'",func.LoginFuncionario);
-            MySqlCommand cmd = new MySqlCommand(Query, conexao);
+            MySqlConnection conexao = new MySqlConnection(ConfigurationManager.AppSettings["conexao"]);
             conexao.Open();
             MySqlDataReader reader;
-            cmd.CommandType = CommandType.Text;            
+            MySqlCommand cmd = conexao.CreateCommand();
+            cmd.CommandType = CommandType.Text; 
+            cmd.CommandText = (" SELECT* FROM FUNCIONARIOS WHERE LOGINFUNC = '"+ func.LoginFuncionario + "' AND SENHAFUNC = '"+ func.Senha +"'");
             reader = cmd.ExecuteReader();
             Boolean result = reader.HasRows;
             if (result == false)
             {
                 MessageBox.Show("O usuário "+ func.LoginFuncionario + " não foi encontrado ");
             }
-            if("SENHA" != func.Senha)
+            if(Senha.Text != func.Senha)
             {
                 MessageBox.Show("A senha não confere");
             }
