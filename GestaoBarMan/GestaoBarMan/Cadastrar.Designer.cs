@@ -36,9 +36,9 @@
             this.NomeFuncionarioCadastro = new System.Windows.Forms.TextBox();
             this.LoginCadastro = new System.Windows.Forms.TextBox();
             this.SenhaCadastro = new System.Windows.Forms.TextBox();
-            this.CheckboxCadastrar = new System.Windows.Forms.CheckBox();
             this.SalvarCadastro = new System.Windows.Forms.Button();
             this.VoltarCadastro = new System.Windows.Forms.Button();
+            this.CheckboxCadastrar = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -113,17 +113,6 @@
             this.SenhaCadastro.Size = new System.Drawing.Size(362, 20);
             this.SenhaCadastro.TabIndex = 7;
             // 
-            // CheckboxCadastrar
-            // 
-            this.CheckboxCadastrar.AutoSize = true;
-            this.CheckboxCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckboxCadastrar.Location = new System.Drawing.Point(167, 229);
-            this.CheckboxCadastrar.Name = "CheckboxCadastrar";
-            this.CheckboxCadastrar.Size = new System.Drawing.Size(276, 22);
-            this.CheckboxCadastrar.TabIndex = 8;
-            this.CheckboxCadastrar.Text = "Marcar se o usuário for administrador";
-            this.CheckboxCadastrar.UseVisualStyleBackColor = true;
-            // 
             // SalvarCadastro
             // 
             this.SalvarCadastro.Location = new System.Drawing.Point(288, 278);
@@ -132,6 +121,7 @@
             this.SalvarCadastro.TabIndex = 9;
             this.SalvarCadastro.Text = "Salvar";
             this.SalvarCadastro.UseVisualStyleBackColor = true;
+            this.SalvarCadastro.Click += new System.EventHandler(this.SalvarCadastro_Click);
             // 
             // VoltarCadastro
             // 
@@ -142,6 +132,18 @@
             this.VoltarCadastro.Text = "Voltar";
             this.VoltarCadastro.UseVisualStyleBackColor = true;
             this.VoltarCadastro.Click += new System.EventHandler(this.VoltarCadastro_Click);
+            // 
+            // CheckboxCadastrar
+            // 
+            this.CheckboxCadastrar.AutoSize = true;
+            this.CheckboxCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckboxCadastrar.Location = new System.Drawing.Point(167, 228);
+            this.CheckboxCadastrar.Name = "CheckboxCadastrar";
+            this.CheckboxCadastrar.Size = new System.Drawing.Size(276, 22);
+            this.CheckboxCadastrar.TabIndex = 8;
+            this.CheckboxCadastrar.Text = "Marcar se o usuário for administrador";
+            this.CheckboxCadastrar.UseVisualStyleBackColor = true;
+            this.CheckboxCadastrar.CheckedChanged += new System.EventHandler(this.CheckboxCadastrar_CheckedChanged);
             // 
             // Cadastrar
             // 
@@ -176,8 +178,8 @@
         private System.Windows.Forms.TextBox NomeFuncionarioCadastro;
         private System.Windows.Forms.TextBox LoginCadastro;
         private System.Windows.Forms.TextBox SenhaCadastro;
-        private System.Windows.Forms.CheckBox CheckboxCadastrar;
         private System.Windows.Forms.Button SalvarCadastro;
         private System.Windows.Forms.Button VoltarCadastro;
+        private System.Windows.Forms.CheckBox CheckboxCadastrar;
     }
 }

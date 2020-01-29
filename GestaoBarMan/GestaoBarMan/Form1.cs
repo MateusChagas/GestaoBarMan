@@ -24,8 +24,8 @@ namespace GestaoBarMan
 
             }
             
-            MySqlConnection conexao = new MySqlConnection(ConfigurationManager.AppSettings["conexao"]);
-            string Query = ("SELECT * FROM FUNCIONARIOS WHERE LOGINFUNC = '" +func.LoginFuncionario + "'");
+            MySqlConnection conexao = new MySqlConnection(ConfigurationManager.AppSettings["conexao"]);            
+            string Query = String.Format("@ SELECT * FROM FUNCIONARIOS WHERE LOGINFUNC = '{0}'",func.LoginFuncionario);
             MySqlCommand cmd = new MySqlCommand(Query, conexao);
             conexao.Open();
             MySqlDataReader reader;
