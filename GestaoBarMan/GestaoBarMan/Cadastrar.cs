@@ -36,7 +36,7 @@ namespace GestaoBarMan
             func.Senha = SenhaCadastro.Text;
             func.UsuarioMaster = CheckboxCadastrar.Checked;
             MySqlConnection conexao = new MySqlConnection(ConfigurationManager.AppSettings["conexao"]);
-            string Query = String.Format("INSERT INTO FUNCIONARIOS VALUES ('{0}','{1}','{2}','{3}')", func.NomeFuncionario, func.LoginFuncionario, func.Senha, func.UsuarioMaster);
+            string Query = String.Format("INSERT INTO FUNCIONARIOS VALUES ('{0}','{1}','{2}',{3})", func.NomeFuncionario, func.LoginFuncionario, func.Senha, func.UsuarioMaster);
             MySqlCommand cmd = new MySqlCommand(Query, conexao);
             conexao.Open();
             cmd.ExecuteNonQuery();
