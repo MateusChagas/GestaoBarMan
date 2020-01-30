@@ -65,7 +65,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(25, 142);
+            this.label3.Location = new System.Drawing.Point(103, 142);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 20);
             this.label3.TabIndex = 2;
@@ -75,7 +75,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 185);
+            this.label4.Location = new System.Drawing.Point(95, 185);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(66, 20);
             this.label4.TabIndex = 3;
@@ -100,14 +100,14 @@
             // 
             // LoginCadastro
             // 
-            this.LoginCadastro.Location = new System.Drawing.Point(89, 144);
+            this.LoginCadastro.Location = new System.Drawing.Point(215, 144);
             this.LoginCadastro.Name = "LoginCadastro";
             this.LoginCadastro.Size = new System.Drawing.Size(362, 20);
             this.LoginCadastro.TabIndex = 6;
             // 
             // SenhaCadastro
             // 
-            this.SenhaCadastro.Location = new System.Drawing.Point(97, 187);
+            this.SenhaCadastro.Location = new System.Drawing.Point(215, 187);
             this.SenhaCadastro.Name = "SenhaCadastro";
             this.SenhaCadastro.PasswordChar = '*';
             this.SenhaCadastro.Size = new System.Drawing.Size(362, 20);

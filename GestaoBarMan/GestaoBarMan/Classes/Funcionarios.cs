@@ -11,7 +11,7 @@ namespace GestaoBarMan
         public string NomeFuncionario { get; set; }
         public string LoginFuncionario { get; set; }
         public string Senha { get; set; }
-        public Boolean UsuarioMaster { get; set; }
+        public Boolean UsuarioMaster { get; set; }       
     }
 
 }
