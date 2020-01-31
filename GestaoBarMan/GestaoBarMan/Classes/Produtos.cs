@@ -9,7 +9,7 @@ namespace GestaoBarMan
     class Produtos
     {
         public string NomeProduto { get; set; }
-        public double ValorProduto { get; set; }
+        public decimal ValorProduto { get; set; }
         public int QtdEstoque { get; set; }      
     }
 }

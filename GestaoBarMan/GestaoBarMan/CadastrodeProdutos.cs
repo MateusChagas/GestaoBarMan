@@ -28,8 +28,9 @@ namespace GestaoBarMan
         private void CadastarProduto_Click(object sender, EventArgs e)
         {
             Produtos p = new Produtos();           
-            p.NomeProduto = NomeProduto.Text;            
-            p.ValorProduto = double.Parse(ValorProduto.Text.Replace(',','.').Replace('.','.'));                       
+            p.NomeProduto = NomeProduto.Text;
+            ValorProduto.Text = String.Format(" {0:F}", ValorProduto.Text);
+            p.ValorProduto = Convert.ToDecimal(ValorProduto.Text);                                          
             p.QtdEstoque = Convert.ToInt32(QtdEstoque.Text);                       
             MySqlConnection conexao = new MySqlConnection(ConfigurationManager.AppSettings["conexao"]);
             MySqlCommand cmd = conexao.CreateCommand();
