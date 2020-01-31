@@ -8,8 +8,8 @@ namespace GestaoBarMan
 {
     class Sangria
     {
-        public double ValorVenda { get; set; }
+        public string ValorVenda { get; set; }
         public DateTime DataVenda { get; set; }
-        public double Troco { get; set; }        
+        public decimal Troco { get; set; }        
     }
 }

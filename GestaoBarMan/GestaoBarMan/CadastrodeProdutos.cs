@@ -27,11 +27,10 @@ namespace GestaoBarMan
 
         private void CadastarProduto_Click(object sender, EventArgs e)
         {
-            Produtos p = new Produtos();
-            CadastrodeProdutos cp = new CadastrodeProdutos();
-            p.NomeProduto = cp.CadastarProduto.Text;
-            p.ValorProduto = Convert.ToDouble(cp.ValorProduto.Text);
-            p.QtdEstoque = Convert.ToInt32(cp.QtdEstoque.Text);
+            Produtos p = new Produtos();           
+            p.NomeProduto = NomeProduto.Text;            
+            p.ValorProduto = double.Parse(ValorProduto.Text);                       
+            p.QtdEstoque = Convert.ToInt32(QtdEstoque.Text);                       
             MySqlConnection conexao = new MySqlConnection(ConfigurationManager.AppSettings["conexao"]);
             MySqlCommand cmd = conexao.CreateCommand();
             cmd.CommandType = CommandType.Text;
@@ -40,6 +39,9 @@ namespace GestaoBarMan
             cmd.ExecuteNonQuery();
             MessageBox.Show(" Cadastro realizado com sucesso ");
             conexao.Close();
+            NomeProduto.Clear();
+            ValorProduto.Clear();
+            QtdEstoque.Clear();
         }
     }
 }

@@ -62,6 +62,7 @@
             this.IniciarVenda.TabIndex = 2;
             this.IniciarVenda.Text = "Iniciar Vendas";
             this.IniciarVenda.UseVisualStyleBackColor = true;
+            this.IniciarVenda.Click += new System.EventHandler(this.IniciarVenda_Click);
             // 
             // Voltar
             // 

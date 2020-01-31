@@ -21,7 +21,7 @@ namespace GestaoBarMan
             Funcionarios func = new Funcionarios();
             func.LoginFuncionario = Login.Text;            
             string Loginfunc = func.LoginFuncionario;
-            func.Senha = Senha.Text;
+            func.Senha = Senha.Text;            
             if (String.IsNullOrEmpty(func.LoginFuncionario)||(String.IsNullOrEmpty(func.Senha)))
             {
                 MessageBox.Show("É necessário informar o login e a senha");
@@ -42,9 +42,9 @@ namespace GestaoBarMan
             }
             else
             {
-                SelecaoTarefa st = new SelecaoTarefa();
-                st.ShowDialog();
-            }
+                SelecaoTarefa st = new SelecaoTarefa();                
+                st.ShowDialog();                
+            }            
         }
 
         private void Cadastrar_Click(object sender, EventArgs e)
@@ -57,7 +57,7 @@ namespace GestaoBarMan
         {
             Funcionarios func = new Funcionarios();
             func.LoginFuncionario = Login.Text;
-            var UsuarioLogado = new RedefinirSenha(Login.Text);
+            var UsuarioLogado = new RedefinirSenha(Login.Text);                                   
             MySqlConnection conexao = new MySqlConnection(ConfigurationManager.AppSettings["conexao"]);
             conexao.Open();
             MySqlDataReader reader;
@@ -79,7 +79,7 @@ namespace GestaoBarMan
             else
             {                
                 UsuarioLogado.Show();
-               
+                
             }
             
         }

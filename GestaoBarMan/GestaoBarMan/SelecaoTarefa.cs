@@ -28,5 +28,12 @@ namespace GestaoBarMan
             CadastrodeProdutos cp = new CadastrodeProdutos();
             cp.ShowDialog();
         }
+
+        private void IniciarVenda_Click(object sender, EventArgs e)
+        {
+            Vendas v = new Vendas();
+            v.ShowDialog(); 
+                      
+        }
     }
 }

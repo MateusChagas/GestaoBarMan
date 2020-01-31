@@ -10,6 +10,6 @@ namespace GestaoBarMan
     {
         public string NomeProduto { get; set; }
         public double ValorProduto { get; set; }
-        public int QtdEstoque { get; set; }
+        public int QtdEstoque { get; set; }      
     }
 }
