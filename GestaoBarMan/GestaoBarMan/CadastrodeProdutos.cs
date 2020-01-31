@@ -29,7 +29,7 @@ namespace GestaoBarMan
         {
             Produtos p = new Produtos();           
             p.NomeProduto = NomeProduto.Text;            
-            p.ValorProduto = double.Parse(ValorProduto.Text);                       
+            p.ValorProduto = double.Parse(ValorProduto.Text.Replace(',','.').Replace('.','.'));                       
             p.QtdEstoque = Convert.ToInt32(QtdEstoque.Text);                       
             MySqlConnection conexao = new MySqlConnection(ConfigurationManager.AppSettings["conexao"]);
             MySqlCommand cmd = conexao.CreateCommand();
