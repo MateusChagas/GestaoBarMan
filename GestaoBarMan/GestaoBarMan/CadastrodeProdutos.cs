@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Configuration;
+using System.Globalization;
 
 namespace GestaoBarMan
 {
@@ -29,8 +30,9 @@ namespace GestaoBarMan
         {
             Produtos p = new Produtos();           
             p.NomeProduto = NomeProduto.Text;
-            ValorProduto.Text = String.Format(" {0:F}", ValorProduto.Text);
-            p.ValorProduto = Convert.ToDecimal(ValorProduto.Text);                                          
+            p.ValorProduto = Convert.ToDecimal(ValorProduto.Text.Replace(',','.'),CultureInfo.InvariantCulture);
+            //p.ValorProduto = Convert.ToDouble(String.Format(" {0:F}", ValorProduto.Text));
+           // p.ValorProduto = Convert.ToDecimal(ValorProduto.Text);                                          
             p.QtdEstoque = Convert.ToInt32(QtdEstoque.Text);                       
             MySqlConnection conexao = new MySqlConnection(ConfigurationManager.AppSettings["conexao"]);
             MySqlCommand cmd = conexao.CreateCommand();
