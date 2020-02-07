@@ -30,7 +30,7 @@
         {
             this.Produtos = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.ListaItemCompra = new System.Windows.Forms.ListView();
             this.ValorVendaItem = new System.Windows.Forms.Label();
             this.ValorItemVenda = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,11 +43,13 @@
             // 
             // Produtos
             // 
+            this.Produtos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Produtos.FormattingEnabled = true;
             this.Produtos.Location = new System.Drawing.Point(117, 48);
             this.Produtos.Name = "Produtos";
             this.Produtos.Size = new System.Drawing.Size(293, 21);
             this.Produtos.TabIndex = 0;
+            this.Produtos.SelectedIndexChanged += new System.EventHandler(this.Produtos_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -59,13 +61,13 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Produtos";
             // 
-            // listView1
+            // ListaItemCompra
             // 
-            this.listView1.Location = new System.Drawing.Point(450, 49);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(354, 397);
-            this.listView1.TabIndex = 2;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.ListaItemCompra.Location = new System.Drawing.Point(450, 49);
+            this.ListaItemCompra.Name = "ListaItemCompra";
+            this.ListaItemCompra.Size = new System.Drawing.Size(354, 397);
+            this.ListaItemCompra.TabIndex = 2;
+            this.ListaItemCompra.UseCompatibleStateImageBehavior = false;
             // 
             // ValorVendaItem
             // 
@@ -79,7 +81,7 @@
             // 
             // ValorItemVenda
             // 
-            this.ValorItemVenda.Location = new System.Drawing.Point(137, 104);
+            this.ValorItemVenda.Location = new System.Drawing.Point(149, 104);
             this.ValorItemVenda.Name = "ValorItemVenda";
             this.ValorItemVenda.Size = new System.Drawing.Size(100, 20);
             this.ValorItemVenda.TabIndex = 4;
@@ -96,7 +98,7 @@
             // 
             // QtdItemVenda
             // 
-            this.QtdItemVenda.Location = new System.Drawing.Point(137, 168);
+            this.QtdItemVenda.Location = new System.Drawing.Point(149, 168);
             this.QtdItemVenda.Name = "QtdItemVenda";
             this.QtdItemVenda.Size = new System.Drawing.Size(100, 20);
             this.QtdItemVenda.TabIndex = 6;
@@ -113,7 +115,7 @@
             // 
             // TotalVenda
             // 
-            this.TotalVenda.Location = new System.Drawing.Point(137, 235);
+            this.TotalVenda.Location = new System.Drawing.Point(149, 237);
             this.TotalVenda.Name = "TotalVenda";
             this.TotalVenda.Size = new System.Drawing.Size(100, 20);
             this.TotalVenda.TabIndex = 8;
@@ -129,12 +131,13 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(231, 375);
+            this.button1.Location = new System.Drawing.Point(228, 375);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(102, 51);
             this.button1.TabIndex = 10;
             this.button1.Text = "Cancelar Compra";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Vendas
             // 
@@ -149,7 +152,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.ValorItemVenda);
             this.Controls.Add(this.ValorVendaItem);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.ListaItemCompra);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Produtos);
             this.Name = "Vendas";
@@ -163,7 +166,7 @@
 
         private System.Windows.Forms.ComboBox Produtos;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView ListaItemCompra;
         private System.Windows.Forms.Label ValorVendaItem;
         private System.Windows.Forms.TextBox ValorItemVenda;
         private System.Windows.Forms.Label label3;
