@@ -28,29 +28,27 @@ namespace GestaoBarMan
             cmd.ExecuteNonQuery();
             MySqlDataReader reader = cmd.ExecuteReader();
             produtos.Load(reader);
-            DataRow row = produtos.NewRow();
-            //MySqlDataAdapter da = new MySqlDataAdapter(cmd.CommandText, conexao);
-            this.Produtos.DataSource = produtos;
+            Produtos.DataSource = produtos;
             Produtos.DisplayMember = "NomeProduto";
-            Produtos.ValueMember = "ValorProduto";            
-            ValorItemVenda.Text = Convert.ToString(Produtos.DisplayMember);
+            Produtos.ValueMember = "ValorProduto";
+            ValorItemVenda.Text = Convert.ToString(Produtos.SelectedValue);
             reader.Close();
-            reader.Dispose();  
+            reader.Dispose();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Vendas v = new Vendas();
-            v.ValorItemVenda.Clear();          
+            v.ValorItemVenda.Clear();
             v.TotalVenda.Clear();
             v.QtdItemVenda.Clear();
             v.ListaItemCompra.Clear();
-            v.Produtos.Items.Clear();
+            v.Produtos.Items.Clear();            
         }
 
         private void Produtos_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+
         }
     }
 }
